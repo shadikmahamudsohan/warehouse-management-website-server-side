@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Abilify",
+        "genericName": "aripiprazole",
+        "supplierName": "Otsuka Pharmaceutical Company",
+        "price": 50,
+        "sold": 14000,
+        "quantity": 40,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Abilify is an antipsychotic medication. It works by changing the actions of chemicals in the brain. it is used to treat the symptoms of psychotic conditions including schizophrenia in adults and children at least 13 years old."
+    },
+    {
+        "name": "Cabometyx",
+        "genericName": "cabozantinib",
+        "supplierName": "Exelixis Announces",
+        "price": 25,
+        "sold": 25000,
+        "quantity": 50,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Cabometyx (cabozantinib) is a kinase inhibitor, a type of enzyme inhibitor that blocks the action of certain protein kinases. It is used to treat advanced kidney cancer."
+    },
+    {
+        "name": "Innopran XL",
+        "genericName": "propranolol",
+        "supplierName": "",
+        "price": 100,
+        "sold": 4000,
+        "quantity": 15,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "InnoPran XL is used in the treatment of atrial fibrillation; high blood pressure; migraine prevention; mitral valve prolapse. Risk cannot be ruled out during pregnancy. InnoPran XL 120 mg is not a controlled substance under the Controlled Substances Act (CSA)."
+    },
+    {
+        "name": "Dapagliflozin",
+        "genericName": "dapagliflozin",
+        "supplierName": "Farxiga",
+        "price": 65,
+        "sold": 12500,
+        "quantity": 25,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Dapagliflozin (Farxiga) is a prescription medication that is mainly used alongside diet and exercise to help treat type 2 diabetes, but it is also used in the treatment of heart failure. It was first approved by the US Food and Drug Administration (FDA) in 2014."
+    },
+    {
+        "name": "Nabumetone ",
+        "genericName": "nabumetone",
+        "supplierName": "Relafen, Relafen DS",
+        "price": 30,
+        "sold": 20000,
+        "quantity": 50,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Nabumetone is a nonsteroidal anti-inflammatory drug (NSAID). Nabumetone works by reducing hormones that cause inflammation and pain in the body. Nabumetone is used to relieve the symptoms of rheumatoid arthritis or osteoarthritis"
+    },
+    {
+        "name": "Rabeprazole",
+        "genericName": "rabeprazole",
+        "supplierName": "AcipHex, AcipHex Sprinkle",
+        "price": 200,
+        "sold": 5000,
+        "quantity": 23,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Rabeprazole is used only in adults to treat conditions involving excessive stomach acid, such as Zollinger-Ellison syndrome. Rabeprazole is also used in adults to promote healing of duodenal ulcers or erosive esophagitis (damage to your esophagus caused by stomach acid)."
+    },
+    {
+        "name": "Ciprofloxacin",
+        "genericName": "ciprofloxacin",
+        "supplierName": "Cipro, Proquin XR",
+        "price": 150,
+        "sold": 4500,
+        "quantity": 17,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Ciprofloxacin is a fluoroquinolone (flor-o-KWIN-o-lone) antibiotic, it is used to treat different types of bacterial infections. It is also used to treat people who have been exposed to anthrax or certain types of plague. Ciprofloxacin extended-release is only approved for use in adults."
+    },
+    {
+        "name": "Famotidine",
+        "genericName": "famotidine",
+        "supplierName": "famotidine",
+        "price": 130,
+        "sold": 6100,
+        "quantity": 30,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Famotidine is a histamine-2 blocker that works by decreasing the amount of acid the stomach produces.Famotidine is used to treat and prevent ulcers in the stomach and intestines. It also treats conditions in which the stomach produces too much acid, such as Zollinger-Ellison syndrome."
+    },
+    {
+        "name": "Nitrofurantoin",
+        "genericName": "nitrofurantoin",
+        "supplierName": "Macrobid, Macrodantin, Nitro Macro",
+        "price": 170,
+        "sold": 1000,
+        "quantity": 14,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Nitrofurantoin is an antibiotic that fights bacteria in the body.Nitrofurantoin is used to treat urinary tract infections. Nitrofurantoin may also be used for purposes not listed in this medication guide. Other drugs may interact with nitrofurantoin, including prescription and over-the-counter medicines, vitamins, and herbal products."
+    },
+    {
+        "name": "Pantoprazole",
+        "genericName": "pantoprazole ",
+        "supplierName": "Protonix",
+        "price": 34,
+        "sold": 12000,
+        "quantity": 210,
+        "img": "https://i.ibb.co/tZs29F5/placeholder-Img.png",
+        "description": "Pantoprazole is used to treat erosive esophagitis (damage to the esophagus from stomach acid caused by gastroesophageal reflux disease, or GERD) in adults and children who are at least 5 years old. Pantoprazole is usually given for up to 8 weeks at a time while your esophagus heals."
+    }
+]
