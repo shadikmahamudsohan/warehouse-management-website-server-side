@@ -42,9 +42,10 @@ async function run() {
             const updateItem = req.body;
             const filter = { _id: ObjectId(id) };
             const options = { upsert: true }
+            console.log(updateItem.quantity);
             const updatedDoc = {
                 $set: {
-                    sold: updateItem.sold,
+                    quantity: updateItem.quantity,
                 },
             };
             const result = await productCollection.updateOne(filter, updatedDoc, options);
