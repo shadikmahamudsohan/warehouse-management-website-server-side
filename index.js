@@ -40,9 +40,8 @@ async function run() {
         app.put('/item/:id', async (req, res) => {
             const id = req.params.id;
             const updateItem = req.body;
-            console.log(updateItem.sold);
             const filter = { _id: ObjectId(id) };
-            const options = { upsert: true };
+            const options = { upsert: true }
             const updatedDoc = {
                 $set: {
                     sold: updateItem.sold,
