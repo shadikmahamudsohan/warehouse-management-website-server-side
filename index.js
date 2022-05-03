@@ -28,11 +28,19 @@ async function run() {
             res.send(products);
         })
 
+        // get items
         app.get('/inventory/:id', async (req, res) => {
             const id = req.params.id;
-            console.log();
             const query = { _id: ObjectId(id) };
             const item = await productCollection.findOne(query);
+            res.send(item);
+        })
+
+        // deleting items
+        app.delete('/inventory/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const item = await productCollection.deleteOne(query);
             res.send(item);
         })
 
