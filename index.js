@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const app = express()
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
@@ -26,6 +27,13 @@ async function run() {
             const cursor = productCollection.find({});
             const products = await cursor.toArray();
             res.send(products);
+        })
+
+        // get token from user email
+        app.post('/login', async (req, res) => {
+            const email = req.body;
+            const token = jwt.sign(email, process.env.ACCESS_TOKEN_SECRET);
+            res.send({ token });
         })
 
         // get items
@@ -69,11 +77,17 @@ async function run() {
 
         // getting items for my items
         app.get('/myItems', async (req, res) => {
-            const email = req.headers.authorization
-            const query = { email: email }
-            const cursor = productCollection.find(query);
-            const products = await cursor.toArray();
-            res.send(products)
+            const data = req.headers.authorization
+            const [email, accessToken] = data.split(' ')
+            var decoded = jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+            if (email === decoded.email) {
+                const query = { email: email }
+                const cursor = productCollection.find(query);
+                const products = await cursor.toArray();
+                res.send(products)
+            } else {
+                res.status(401).send({ message: 'unauthorized access' })
+            }
         })
         // getting items for my items
         app.delete('/myItems/:id', async (req, res) => {
