@@ -76,8 +76,9 @@ async function run() {
             res.send(products)
         })
         // getting items for my items
-        app.get('/myItems/:id', async (req, res) => {
+        app.delete('/myItems/:id', async (req, res) => {
             const id = req.params.id;
+            console.log(id);
             const query = { _id: ObjectId(id) };
             const item = await productCollection.deleteOne(query);
             res.send(item);
