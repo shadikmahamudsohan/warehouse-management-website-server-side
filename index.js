@@ -67,6 +67,15 @@ async function run() {
             res.send(result);
         })
 
+        // getting items for my items
+        app.get('/myItems', async (req, res) => {
+            const email = req.headers.authorization
+            const query = { email: email }
+            const cursor = productCollection.find(query);
+            const products = await cursor.toArray();
+            res.send(products)
+        })
+
     } finally {
         // await client.close();
     }
