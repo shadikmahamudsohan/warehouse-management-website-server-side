@@ -75,6 +75,13 @@ async function run() {
             const products = await cursor.toArray();
             res.send(products)
         })
+        // getting items for my items
+        app.get('/myItems/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const item = await productCollection.deleteOne(query);
+            res.send(item);
+        })
 
     } finally {
         // await client.close();
