@@ -78,15 +78,16 @@ async function run() {
         // getting items for my items
         app.get('/myItems', async (req, res) => {
             const data = req.headers.authorization
-            const [email, accessToken] = data.split(' ')
-            var decoded = jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+            const email = data.split(' ')[0];
+            const accessToken = data.split(' ')[1];
+            const decoded = verifyToken(accessToken);
             if (email === decoded.email) {
                 const query = { email: email }
                 const cursor = productCollection.find(query);
                 const products = await cursor.toArray();
                 res.send(products)
             } else {
-                res.status(401).send({ message: 'unauthorized access' })
+                res.status(401).send({ message: 'unAuthorized Access' })
             }
         })
         // getting items for my items
@@ -114,3 +115,17 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Pharmabd server is listening on port ${port}`)
 })
+
+// verify token function
+function verifyToken(token) {
+    let email;
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (err, decoded) {
+        if (err) {
+            email = `Invalid email`;
+        }
+        if (decoded) {
+            email = decoded;
+        }
+    });
+    return email;
+} 
